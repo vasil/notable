@@ -7,7 +7,7 @@ class NoteTaker < ::Uppercut::Agent
   attr_accessor :opts
   def initialize(opts)
 	@opts = opts
-    super(opts['jabber_username'], opts['jabber_password'], :connect => false)
+    super(opts['jabber_username'], opts['jabber_password'], {:connect => false, :host => opts['jabber_host']})
   end
 
 

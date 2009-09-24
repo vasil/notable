@@ -52,6 +52,9 @@ class NoteTakerArgs < Hash
       o.on('-p PASS', '--password PASS', 'jabber PASS to connect with') do |p|
         self['jabber_password'] = p
       end
+      o.on('-s SERVER', '--server SERVER', 'jabber SERVER to connect to') do |h|
+        self['jabber_host'] = h
+      end
       o.on('-d DEST', '--destination DEST',
                           'Root url to post messages to') do |r|
         self['url'] = r
